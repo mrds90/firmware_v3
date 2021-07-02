@@ -30,6 +30,8 @@ extern "C" {
 
 /*=====[Public function-like macros]=========================================*/
 
+#define leerTecla(tecla) gpioRead(tecla) 
+
 /*=====[Definitions of public data types]====================================*/
 typedef enum {
    CAMBIAR_SENTIDO,

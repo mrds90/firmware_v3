@@ -60,7 +60,7 @@ int main(void)
 		}
 
 	   /*-----------------Cambio de sentido de conmutación------------------*/
-	   if (!gpioRead(TEC1)) {
+	   if (!leerTecla(TEC1)) {
 		   if (flag[CAMBIAR_SENTIDO]) {
 			   flag[CAMBIAR_SENTIDO] = false;
 				flag[SENTIDO_CRECIENTE] = !flag[SENTIDO_CRECIENTE];
@@ -72,7 +72,7 @@ int main(void)
 	   }
 
 	   /* --------------Cambio de velocidad de conmutación------------------*/
-	   if (!gpioRead(TEC2)) {
+	   if (!leerTecla(TEC2)) {
 		   if (flag[CAMBIAR_VELOCIDAD]) {
 			   flag[CAMBIAR_VELOCIDAD] = false;
 			   demora++;
@@ -89,7 +89,7 @@ int main(void)
 	   }
 		
 		/*------------------------------ Cambiar función de Leds -----------------------*/
-		if (!gpioRead(TEC3)) {
+		if (!leerTecla(TEC3)) {
 		   if (flag[FUNCION_LEDS]) {
 			   flag[FUNCION_LEDS] = false;
 				if (ledFunction[HABILITADO] == encenderLedUnico) {
@@ -101,12 +101,12 @@ int main(void)
 		   }
 	   }
 	   else {
-			/*habilitar el encendido de leds próximo cuando se suelta la tecla*/
+			/*habilitar el encendido de leds cuando se suelta la tecla*/
 		   flag[FUNCION_LEDS] = true;
 	   }
 
 		/*------------------------------- Apagar/Habilitar Leds ------------------------*/
-		if (!gpioRead(TEC4)) {
+		if (!leerTecla(TEC4)) {
 		   if (flag[CONMUTAR_LEDS]) {
 			   flag[CONMUTAR_LEDS] = false;
 				funcion_actual ^= HABILITADO;
@@ -157,7 +157,7 @@ bool_t conmutarLeds(gpioMap_t numero) {
 	bool_t no_error = true;
 	uint8_t i;
 	for (i = LEDB ; i <= LED3 ; i++) {
-		no_error = gpioWrite(i, (numero % 2) == 0);
+		no_error = gpioWrite(i, (numero % 2) == 0); //si numero es par prende todo los leds y si no apaga
 		if (!no_error) {
 			break;
 		}
