@@ -1,0 +1,69 @@
+\hypertarget{_dominguez___actividad__1_8c}{}\section{/home/marcos/\+C\+I\+A\+A/firmware\+\_\+v3/actividad\+Pre\+Inicio/\+Dominguez\+\_\+\+Actividad\+\_\+1/src/\+Dominguez\+\_\+\+Actividad\+\_\+1.c File Reference}
+\label{_dominguez___actividad__1_8c}\index{/home/marcos/\+C\+I\+A\+A/firmware\+\_\+v3/actividad\+Pre\+Inicio/\+Dominguez\+\_\+\+Actividad\+\_\+1/src/\+Dominguez\+\_\+\+Actividad\+\_\+1.\+c@{/home/marcos/\+C\+I\+A\+A/firmware\+\_\+v3/actividad\+Pre\+Inicio/\+Dominguez\+\_\+\+Actividad\+\_\+1/src/\+Dominguez\+\_\+\+Actividad\+\_\+1.\+c}}
+{\ttfamily \#include \char`\"{}Dominguez\+\_\+\+Actividad\+\_\+1.\+h\char`\"{}}\newline
+Include dependency graph for Dominguez\+\_\+\+Actividad\+\_\+1.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_dominguez___actividad__1_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em El comportamiento esta basado en la siguiente tabla\+: \end{DoxyCompactList}\item 
+bool\+\_\+t \hyperlink{_dominguez___actividad__1_8c_aee414cce23e1f4b1bc7bfd4c01f885c0}{encender\+Led\+Unico} (gpio\+Map\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em Enciende el led que se le pasa por argumento y apaga los otros, si entra un valor que no corresponde a ningun led apaga todos $\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_dominguez___actividad__1_8c_aee414cce23e1f4b1bc7bfd4c01f885c0}\label{_dominguez___actividad__1_8c_aee414cce23e1f4b1bc7bfd4c01f885c0}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+c@{Dominguez\+\_\+\+Actividad\+\_\+1.\+c}!encender\+Led\+Unico@{encender\+Led\+Unico}}
+\index{encender\+Led\+Unico@{encender\+Led\+Unico}!Dominguez\+\_\+\+Actividad\+\_\+1.\+c@{Dominguez\+\_\+\+Actividad\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{encender\+Led\+Unico()}{encenderLedUnico()}}
+{\footnotesize\ttfamily bool\+\_\+t encender\+Led\+Unico (\begin{DoxyParamCaption}\item[{gpio\+Map\+\_\+t}]{led }\end{DoxyParamCaption})}
+
+
+
+Enciende el led que se le pasa por argumento y apaga los otros, si entra un valor que no corresponde a ningun led apaga todos $\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & gpio\+Map\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+\_\+t (true si pudo escribir todos los pines) 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+c.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{_dominguez___actividad__1_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+c@{Dominguez\+\_\+\+Actividad\+\_\+1.\+c}!main@{main}}
+\index{main@{main}!Dominguez\+\_\+\+Actividad\+\_\+1.\+c@{Dominguez\+\_\+\+Actividad\+\_\+1.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+El comportamiento esta basado en la siguiente tabla\+: 
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Tecla }&\textbf{ Resultado  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Tecla }&\textbf{ Resultado  }\\\cline{1-2}
+\endhead
+T\+E\+C1 &Sentido a la derecha \\\cline{1-2}
+T\+E\+C2 &Período 150 \\\cline{1-2}
+T\+E\+C3 &Período 750 \\\cline{1-2}
+T\+E\+C4 &Sentido a la izquierda \\\cline{1-2}
+\end{longtabu}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+c.
+

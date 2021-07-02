@@ -109,7 +109,7 @@ bool_t encenderLedUnico(gpioMap_t led) {
 	bool_t no_error;
 	uint8_t i;
 	for (i = LEDR ; i <= LED3 ; i++) {
-		no_error = gpioWrite(i, i == led);
+		no_error = gpioWrite(i, i == led); // si i == led enciende, sino apaga.
 		if (!no_error) {
 			break;
 		}

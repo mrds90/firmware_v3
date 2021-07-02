@@ -1,0 +1,255 @@
+\hypertarget{_dominguez___actividad__1_8h}{}\section{/home/marcos/\+C\+I\+A\+A/firmware\+\_\+v3/actividad\+Pre\+Inicio/\+Dominguez\+\_\+\+Actividad\+\_\+1/inc/\+Dominguez\+\_\+\+Actividad\+\_\+1.h File Reference}
+\label{_dominguez___actividad__1_8h}\index{/home/marcos/\+C\+I\+A\+A/firmware\+\_\+v3/actividad\+Pre\+Inicio/\+Dominguez\+\_\+\+Actividad\+\_\+1/inc/\+Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{/home/marcos/\+C\+I\+A\+A/firmware\+\_\+v3/actividad\+Pre\+Inicio/\+Dominguez\+\_\+\+Actividad\+\_\+1/inc/\+Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sapi.\+h\char`\"{}}\newline
+Include dependency graph for Dominguez\+\_\+\+Actividad\+\_\+1.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_dominguez___actividad__1_8h_a904c9d8594a2ee37c004aaeebc959559}{P\+E\+R\+I\+O\+D\+O\+\_\+150\+MS}~150
+\item 
+\#define \hyperlink{_dominguez___actividad__1_8h_aefe03add6a533a443073e84288cb36de}{P\+E\+R\+I\+O\+D\+O\+\_\+750\+MS}~750
+\item 
+\#define \hyperlink{_dominguez___actividad__1_8h_a12ab782e732e3021b5b84398809253d9}{L\+E\+D\+\_\+\+Q\+TY}~4
+\item 
+\#define \hyperlink{_dominguez___actividad__1_8h_a0747033d442a2adaaa6a9e7e08613d00}{leer\+Tecla}(tecla)~!gpio\+Read(tecla)
+\begin{DoxyCompactList}\small\item\em leo el estado de la tecla \end{DoxyCompactList}\item 
+\#define \hyperlink{_dominguez___actividad__1_8h_a6c20aa1b18d3988d8f77f9e5cae53700}{demora\+Cumplida}(demora)~delay\+Read(demora)
+\begin{DoxyCompactList}\small\item\em Controla si el tiempo de demora elegido ya se cumplió \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4db}{flag\+\_\+t} \{ \hyperlink{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dbaf2dc25ed0ba95d379d365d0f21946ae2}{S\+E\+N\+T\+I\+DO}, 
+\hyperlink{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dba7698cdaa0e99a5946a562e624ee709db}{C\+A\+M\+B\+I\+A\+R\+\_\+\+S\+E\+N\+T\+I\+DO}, 
+\hyperlink{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dba5e93c6229b99fca7f85d8640bbfad29e}{C\+A\+M\+B\+I\+A\+R\+\_\+\+V\+E\+L\+O\+C\+I\+D\+AD}, 
+\hyperlink{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dbaf14b5b51039d331bfdc3a0b6a7909ffb}{F\+L\+A\+G\+S\+\_\+\+Q\+TY}
+ \}
+\item 
+enum \hyperlink{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1}{demoras\+\_\+t} \{ \hyperlink{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a618385f9bb6f56e9b48834f05828bee7}{D150\+MS}, 
+\hyperlink{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a8ac2d6097e68e1b8183ffad61fd91142}{D750\+MS}, 
+\hyperlink{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a74e60d1951d9ec4a89099d76fa139c68}{D\+E\+M\+O\+R\+A\+S\+\_\+\+Q\+TY}
+ \}
+\item 
+enum \hyperlink{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171}{sentido\+\_\+t} \{ \hyperlink{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171a5f222435b5c8c7240b5e5cecf9957fc2}{I\+Z\+Q\+U\+I\+E\+R\+DA}, 
+\hyperlink{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171ac87dea15133700d8698efbe63bc0745d}{D\+E\+R\+E\+C\+HA}
+ \}
+\item 
+enum \hyperlink{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9}{funcion\+\_\+t} \{ \hyperlink{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9af0e877fcc0f8b444deb188e9487f4188}{D\+E\+S\+H\+A\+B\+I\+L\+I\+T\+A\+DO}, 
+\hyperlink{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9a97fbfd51cd92d018d0eb090bc581bc99}{H\+A\+B\+I\+L\+I\+T\+A\+DO}, 
+\hyperlink{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9ae70febb8baa70744c301886d9c96fcb7}{F\+U\+N\+C\+I\+O\+N\+E\+S\+\_\+\+Q\+TY}
+ \}\begin{DoxyCompactList}\small\item\em Define si es una función de habilitación o deshabilitación (son dos estados posibles) \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool\+\_\+t \hyperlink{_dominguez___actividad__1_8h_aee414cce23e1f4b1bc7bfd4c01f885c0}{encender\+Led\+Unico} (gpio\+Map\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em Enciende el led que se le pasa por argumento y apaga los otros, si entra un valor que no corresponde a ningun led apaga todos $\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_a6c20aa1b18d3988d8f77f9e5cae53700}\label{_dominguez___actividad__1_8h_a6c20aa1b18d3988d8f77f9e5cae53700}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!demora\+Cumplida@{demora\+Cumplida}}
+\index{demora\+Cumplida@{demora\+Cumplida}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{demora\+Cumplida}{demoraCumplida}}
+{\footnotesize\ttfamily \#define demora\+Cumplida(\begin{DoxyParamCaption}\item[{}]{demora }\end{DoxyParamCaption})~delay\+Read(demora)}
+
+
+
+Controla si el tiempo de demora elegido ya se cumplió 
+
+
+\begin{DoxyParams}{Parameters}
+{\em demora} & $\ast$delay\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+\_\+t (true si la demora se cumplió) 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_a12ab782e732e3021b5b84398809253d9}\label{_dominguez___actividad__1_8h_a12ab782e732e3021b5b84398809253d9}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!L\+E\+D\+\_\+\+Q\+TY@{L\+E\+D\+\_\+\+Q\+TY}}
+\index{L\+E\+D\+\_\+\+Q\+TY@{L\+E\+D\+\_\+\+Q\+TY}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+Q\+TY}{LED\_QTY}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+Q\+TY~4}
+
+
+
+Definition at line 30 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_a0747033d442a2adaaa6a9e7e08613d00}\label{_dominguez___actividad__1_8h_a0747033d442a2adaaa6a9e7e08613d00}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!leer\+Tecla@{leer\+Tecla}}
+\index{leer\+Tecla@{leer\+Tecla}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{leer\+Tecla}{leerTecla}}
+{\footnotesize\ttfamily \#define leer\+Tecla(\begin{DoxyParamCaption}\item[{}]{tecla }\end{DoxyParamCaption})~!gpio\+Read(tecla)}
+
+
+
+leo el estado de la tecla 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tecla} & gpio\+Map\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+\_\+t (true si tecla apretada) 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_a904c9d8594a2ee37c004aaeebc959559}\label{_dominguez___actividad__1_8h_a904c9d8594a2ee37c004aaeebc959559}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!P\+E\+R\+I\+O\+D\+O\+\_\+150\+MS@{P\+E\+R\+I\+O\+D\+O\+\_\+150\+MS}}
+\index{P\+E\+R\+I\+O\+D\+O\+\_\+150\+MS@{P\+E\+R\+I\+O\+D\+O\+\_\+150\+MS}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{P\+E\+R\+I\+O\+D\+O\+\_\+150\+MS}{PERIODO\_150MS}}
+{\footnotesize\ttfamily \#define P\+E\+R\+I\+O\+D\+O\+\_\+150\+MS~150}
+
+
+
+Definition at line 28 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_aefe03add6a533a443073e84288cb36de}\label{_dominguez___actividad__1_8h_aefe03add6a533a443073e84288cb36de}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!P\+E\+R\+I\+O\+D\+O\+\_\+750\+MS@{P\+E\+R\+I\+O\+D\+O\+\_\+750\+MS}}
+\index{P\+E\+R\+I\+O\+D\+O\+\_\+750\+MS@{P\+E\+R\+I\+O\+D\+O\+\_\+750\+MS}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{P\+E\+R\+I\+O\+D\+O\+\_\+750\+MS}{PERIODO\_750MS}}
+{\footnotesize\ttfamily \#define P\+E\+R\+I\+O\+D\+O\+\_\+750\+MS~750}
+
+
+
+Definition at line 29 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1}\label{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!demoras\+\_\+t@{demoras\+\_\+t}}
+\index{demoras\+\_\+t@{demoras\+\_\+t}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{demoras\+\_\+t}{demoras\_t}}
+{\footnotesize\ttfamily enum \hyperlink{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1}{demoras\+\_\+t}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D150\+MS@{D150\+MS}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!D150\+MS@{D150\+MS}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a618385f9bb6f56e9b48834f05828bee7}\label{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a618385f9bb6f56e9b48834f05828bee7}} 
+D150\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D750\+MS@{D750\+MS}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!D750\+MS@{D750\+MS}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a8ac2d6097e68e1b8183ffad61fd91142}\label{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a8ac2d6097e68e1b8183ffad61fd91142}} 
+D750\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+E\+M\+O\+R\+A\+S\+\_\+\+Q\+TY@{D\+E\+M\+O\+R\+A\+S\+\_\+\+Q\+TY}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!D\+E\+M\+O\+R\+A\+S\+\_\+\+Q\+TY@{D\+E\+M\+O\+R\+A\+S\+\_\+\+Q\+TY}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a74e60d1951d9ec4a89099d76fa139c68}\label{_dominguez___actividad__1_8h_a888359fed03d1d2110e371b92934b3d1a74e60d1951d9ec4a89099d76fa139c68}} 
+D\+E\+M\+O\+R\+A\+S\+\_\+\+Q\+TY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 57 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4db}\label{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4db}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!flag\+\_\+t@{flag\+\_\+t}}
+\index{flag\+\_\+t@{flag\+\_\+t}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{flag\+\_\+t}{flag\_t}}
+{\footnotesize\ttfamily enum \hyperlink{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4db}{flag\+\_\+t}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+N\+T\+I\+DO@{S\+E\+N\+T\+I\+DO}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!S\+E\+N\+T\+I\+DO@{S\+E\+N\+T\+I\+DO}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dbaf2dc25ed0ba95d379d365d0f21946ae2}\label{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dbaf2dc25ed0ba95d379d365d0f21946ae2}} 
+S\+E\+N\+T\+I\+DO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+M\+B\+I\+A\+R\+\_\+\+S\+E\+N\+T\+I\+DO@{C\+A\+M\+B\+I\+A\+R\+\_\+\+S\+E\+N\+T\+I\+DO}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!C\+A\+M\+B\+I\+A\+R\+\_\+\+S\+E\+N\+T\+I\+DO@{C\+A\+M\+B\+I\+A\+R\+\_\+\+S\+E\+N\+T\+I\+DO}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dba7698cdaa0e99a5946a562e624ee709db}\label{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dba7698cdaa0e99a5946a562e624ee709db}} 
+C\+A\+M\+B\+I\+A\+R\+\_\+\+S\+E\+N\+T\+I\+DO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+M\+B\+I\+A\+R\+\_\+\+V\+E\+L\+O\+C\+I\+D\+AD@{C\+A\+M\+B\+I\+A\+R\+\_\+\+V\+E\+L\+O\+C\+I\+D\+AD}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!C\+A\+M\+B\+I\+A\+R\+\_\+\+V\+E\+L\+O\+C\+I\+D\+AD@{C\+A\+M\+B\+I\+A\+R\+\_\+\+V\+E\+L\+O\+C\+I\+D\+AD}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dba5e93c6229b99fca7f85d8640bbfad29e}\label{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dba5e93c6229b99fca7f85d8640bbfad29e}} 
+C\+A\+M\+B\+I\+A\+R\+\_\+\+V\+E\+L\+O\+C\+I\+D\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+L\+A\+G\+S\+\_\+\+Q\+TY@{F\+L\+A\+G\+S\+\_\+\+Q\+TY}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!F\+L\+A\+G\+S\+\_\+\+Q\+TY@{F\+L\+A\+G\+S\+\_\+\+Q\+TY}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dbaf14b5b51039d331bfdc3a0b6a7909ffb}\label{_dominguez___actividad__1_8h_ae9d2c5c5af031e3a3fda58fa173cb4dbaf14b5b51039d331bfdc3a0b6a7909ffb}} 
+F\+L\+A\+G\+S\+\_\+\+Q\+TY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 49 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9}\label{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!funcion\+\_\+t@{funcion\+\_\+t}}
+\index{funcion\+\_\+t@{funcion\+\_\+t}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{funcion\+\_\+t}{funcion\_t}}
+{\footnotesize\ttfamily enum \hyperlink{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9}{funcion\+\_\+t}}
+
+
+
+Define si es una función de habilitación o deshabilitación (son dos estados posibles) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+E\+S\+H\+A\+B\+I\+L\+I\+T\+A\+DO@{D\+E\+S\+H\+A\+B\+I\+L\+I\+T\+A\+DO}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!D\+E\+S\+H\+A\+B\+I\+L\+I\+T\+A\+DO@{D\+E\+S\+H\+A\+B\+I\+L\+I\+T\+A\+DO}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9af0e877fcc0f8b444deb188e9487f4188}\label{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9af0e877fcc0f8b444deb188e9487f4188}} 
+D\+E\+S\+H\+A\+B\+I\+L\+I\+T\+A\+DO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+B\+I\+L\+I\+T\+A\+DO@{H\+A\+B\+I\+L\+I\+T\+A\+DO}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!H\+A\+B\+I\+L\+I\+T\+A\+DO@{H\+A\+B\+I\+L\+I\+T\+A\+DO}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9a97fbfd51cd92d018d0eb090bc581bc99}\label{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9a97fbfd51cd92d018d0eb090bc581bc99}} 
+H\+A\+B\+I\+L\+I\+T\+A\+DO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+U\+N\+C\+I\+O\+N\+E\+S\+\_\+\+Q\+TY@{F\+U\+N\+C\+I\+O\+N\+E\+S\+\_\+\+Q\+TY}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!F\+U\+N\+C\+I\+O\+N\+E\+S\+\_\+\+Q\+TY@{F\+U\+N\+C\+I\+O\+N\+E\+S\+\_\+\+Q\+TY}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9ae70febb8baa70744c301886d9c96fcb7}\label{_dominguez___actividad__1_8h_a2b6ef78c087f7487e143b762cd07a3e9ae70febb8baa70744c301886d9c96fcb7}} 
+F\+U\+N\+C\+I\+O\+N\+E\+S\+\_\+\+Q\+TY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 73 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171}\label{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!sentido\+\_\+t@{sentido\+\_\+t}}
+\index{sentido\+\_\+t@{sentido\+\_\+t}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{sentido\+\_\+t}{sentido\_t}}
+{\footnotesize\ttfamily enum \hyperlink{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171}{sentido\+\_\+t}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+Z\+Q\+U\+I\+E\+R\+DA@{I\+Z\+Q\+U\+I\+E\+R\+DA}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!I\+Z\+Q\+U\+I\+E\+R\+DA@{I\+Z\+Q\+U\+I\+E\+R\+DA}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171a5f222435b5c8c7240b5e5cecf9957fc2}\label{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171a5f222435b5c8c7240b5e5cecf9957fc2}} 
+I\+Z\+Q\+U\+I\+E\+R\+DA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+E\+R\+E\+C\+HA@{D\+E\+R\+E\+C\+HA}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!D\+E\+R\+E\+C\+HA@{D\+E\+R\+E\+C\+HA}}}\mbox{\Hypertarget{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171ac87dea15133700d8698efbe63bc0745d}\label{_dominguez___actividad__1_8h_af1c22b9613796d0c64cfaeb50909c171ac87dea15133700d8698efbe63bc0745d}} 
+D\+E\+R\+E\+C\+HA&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 64 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_dominguez___actividad__1_8h_aee414cce23e1f4b1bc7bfd4c01f885c0}\label{_dominguez___actividad__1_8h_aee414cce23e1f4b1bc7bfd4c01f885c0}} 
+\index{Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}!encender\+Led\+Unico@{encender\+Led\+Unico}}
+\index{encender\+Led\+Unico@{encender\+Led\+Unico}!Dominguez\+\_\+\+Actividad\+\_\+1.\+h@{Dominguez\+\_\+\+Actividad\+\_\+1.\+h}}
+\subsubsection{\texorpdfstring{encender\+Led\+Unico()}{encenderLedUnico()}}
+{\footnotesize\ttfamily bool\+\_\+t encender\+Led\+Unico (\begin{DoxyParamCaption}\item[{gpio\+Map\+\_\+t}]{led }\end{DoxyParamCaption})}
+
+
+
+Enciende el led que se le pasa por argumento y apaga los otros, si entra un valor que no corresponde a ningun led apaga todos $\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & gpio\+Map\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+\_\+t (true si pudo escribir todos los pines) 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Dominguez\+\_\+\+Actividad\+\_\+1.\+c.
+
