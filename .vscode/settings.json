@@ -1,5 +1,6 @@
 {
    "files.associations": {
-      "alternateled.h": "c"
+      "alternateled.h": "c",
+      "sapi.h": "c"
    }
 }
