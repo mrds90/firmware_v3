@@ -103,7 +103,12 @@ typedef struct {
  * @return bool_t (true si pudo escribir todos los pines)
  */
 bool_t encenderLedUnico(gpioMap_t led);
-
+/**
+ * @brief Apaga todos los leds
+ * 
+ * @return bool_t 
+ */
+bool_t apagarLeds(void); // no se usa
 /**
  * @brief gestiona la eleccion del led que debe encenderse según la secuencia que se le pasa por referencia
  * 

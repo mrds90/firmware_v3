@@ -113,6 +113,18 @@ bool_t encenderLedUnico(gpioMap_t led) {
 	return no_error;
 }
 
+bool_t apagarLeds(void) {
+	bool_t no_error;
+	uint8_t i;
+	for (i = LEDR ; i <= LED3 ; i++) {
+		if (!apagarLed(i)) {
+			no_error = false;
+			break;
+		}
+	}
+	return no_error;
+}
+
 void activarSecuencia(control_secuencia_t *ptr_secuencia) {
 	ptr_secuencia->ptrLed++;
 	if (ptr_secuencia->ptrLed == ptr_secuencia->ptrUltimoLed) {
