@@ -38,6 +38,20 @@ extern "C" {
  */
 #define leerTecla(tecla) !gpioRead(tecla)
 /**
+ * @brief Enciende el led que le defino
+ * 
+ * @param led gpioMap_t
+ * @return bool_t (true si logro encender)
+ */
+#define encenderLed(led) gpioWrite(led, 1)
+/**
+ * @brief apago el led que le defino
+ * 
+ * @param led gpioMap_t
+ * @return bool_t (true si logro apagar)
+ */
+#define apagarLed(led) gpioWrite(led, 0)
+/**
  * @brief Controla si el tiempo de demora elegido ya se cumplió
  * 
  * @param demora *delay_t
@@ -47,12 +61,11 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 typedef enum {
-   SENTIDO,
    CAMBIAR_SENTIDO,
    CAMBIAR_VELOCIDAD,
 
    FLAGS_QTY
-} flag_t;
+} flag_tecla_t;
 
 typedef enum {
    D150MS,
@@ -61,23 +74,11 @@ typedef enum {
    DEMORAS_QTY
 } demoras_t;
 
-typedef enum {
-   IZQUIERDA,
-   DERECHA
-   
-} sentido_t;
-/**
- * @brief Define si es una función de habilitación o deshabilitación (son dos estados posibles)
- * 
- */
-typedef enum {
-   DESHABILITADO,
-   HABILITADO,
-
-   FUNCIONES_QTY
-} funcion_t;
-
-
+typedef struct {
+   gpioMap_t *ptrLed;
+   gpioMap_t *ptrPrimerLed;
+   gpioMap_t *ptrUltimoLed;
+} control_secuencia_t;
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 /**
@@ -87,7 +88,12 @@ typedef enum {
  * @return bool_t (true si pudo escribir todos los pines)
  */
 bool_t encenderLedUnico(gpioMap_t led);
-
+/**
+ * @brief controla el cambio de secuencia
+ * 
+ * @param ptr_secuencia 
+ */
+void activarSecuencia(control_secuencia_t *ptr_secuencia);
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/
 
 /*=====[C++ - end]===========================================================*/
