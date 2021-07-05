@@ -46,7 +46,7 @@ int main(void)
 		static bool_t flag_tecla[FLAGS_QTY] = {true};
 	   
 		/*-----------------Cambio de sentido de conmutación------------------*/
-	   if (leerTecla(TEC1)) {
+	   if (leerTecla(TEC1)) { // Sentido de secuencia 1 (INCREMENTAL)
 		   if (flag_tecla[CAMBIAR_SENTIDO]) {
 			   flag_tecla[CAMBIAR_SENTIDO] = false;
 				control_secuencia.ptrLed = &secuencia1[0];
@@ -54,7 +54,7 @@ int main(void)
 				control_secuencia.ptrUltimoLed = &secuencia1[sizeof(secuencia1)/sizeof(secuencia1[0])];
 		   }
 	   }
-      else if (leerTecla(TEC4)) { // 150ms de período
+      else if (leerTecla(TEC4)) { // Sentido de secuencia 2 (DECREMENTAL)
          if (flag_tecla[CAMBIAR_SENTIDO]) {
 			   flag_tecla[CAMBIAR_SENTIDO] = false;
 				control_secuencia.ptrLed = &secuencia2[0];
@@ -67,13 +67,13 @@ int main(void)
 		   flag_tecla[CAMBIAR_SENTIDO] = true;
 	   }
 	   /* --------------Cambio de velocidad de conmutación------------------*/
-	   if (leerTecla(TEC2)) { // 150ms de período
+	   if (leerTecla(TEC2)) { // elegir  150ms de período
 		   if (flag_tecla[CAMBIAR_VELOCIDAD]) {
 			   flag_tecla[CAMBIAR_VELOCIDAD] = false;
 			   delayConfig(&delayLeds, times[D150MS]);
 		   }
 	   } 
-      else if (leerTecla(TEC3)) { // 750ms de período
+      else if (leerTecla(TEC3)) { // elegir 750ms de período
 		   if (flag_tecla[CAMBIAR_VELOCIDAD]) {
 			   flag_tecla[CAMBIAR_VELOCIDAD] = false;
 			   delayConfig(&delayLeds, times[D750MS]);
@@ -112,7 +112,6 @@ bool_t encenderLedUnico(gpioMap_t led) {
 	}
 	return no_error;
 }
-
 
 void activarSecuencia(control_secuencia_t *ptr_secuencia) {
 	ptr_secuencia->ptrLed++;

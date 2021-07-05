@@ -105,7 +105,7 @@ typedef struct {
 bool_t encenderLedUnico(gpioMap_t led);
 
 /**
- * @brief controla el cambio de secuencia
+ * @brief gestiona la eleccion del led que debe encenderse según la secuencia que se le pasa por referencia
  * 
  * @param ptr_secuencia 
  */
