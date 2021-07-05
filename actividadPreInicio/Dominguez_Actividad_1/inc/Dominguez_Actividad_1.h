@@ -60,20 +60,30 @@ extern "C" {
 #define demoraCumplida(demora) delayRead(demora)
 
 /*=====[Definitions of public data types]====================================*/
+/**
+ * @brief Indice de flags que habilitan las teclas
+ * 
+ */
 typedef enum {
    CAMBIAR_SENTIDO,
    CAMBIAR_VELOCIDAD,
 
    FLAGS_QTY
 } flag_tecla_t;
-
+/**
+ * @brief Indice del vector que tiene los tiempos de demora.
+ * 
+ */
 typedef enum {
    D150MS,
    D750MS,
 
    DEMORAS_QTY
 } demoras_t;
-
+/**
+ * @brief Estructura para controlar de forma escalable y genérica cualquier secuencia.
+ * 
+ */
 typedef struct {
    gpioMap_t *ptrLed;
    gpioMap_t *ptrPrimerLed;

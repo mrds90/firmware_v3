@@ -37,7 +37,7 @@ int main(void)
 	gpioMap_t secuencia1[] = {LEDB,LED1,LED2,LED3};
 	gpioMap_t secuencia2[] = {LED3,LED2,LED1,LEDB};
 	
-	control_secuencia_t control_secuencia = {.ptrLed = &secuencia1[0], .ptrPrimerLed = &secuencia1[0], .ptrUltimoLed = &secuencia1[4]};
+	control_secuencia_t control_secuencia = {.ptrLed = &secuencia1[0], .ptrPrimerLed = &secuencia1[0], .ptrUltimoLed = &secuencia1[sizeof(secuencia1)/sizeof(secuencia1[0])]};
 
    /* Variables de Retardo no bloqueante */
 	delay_t delayLeds;
@@ -58,7 +58,7 @@ int main(void)
 			   flag_tecla[CAMBIAR_SENTIDO] = false;
 				control_secuencia.ptrLed = &secuencia1[0];
 				control_secuencia.ptrPrimerLed = &secuencia1[0];
-				control_secuencia.ptrUltimoLed = &secuencia1[4];
+				control_secuencia.ptrUltimoLed = &secuencia1[sizeof(secuencia1)/sizeof(secuencia1[0])];
 		   }
 	   }
       else if (leerTecla(TEC4)) { // 150ms de período
@@ -66,7 +66,7 @@ int main(void)
 			   flag_tecla[CAMBIAR_SENTIDO] = false;
 				control_secuencia.ptrLed = &secuencia2[0];
 				control_secuencia.ptrPrimerLed = &secuencia2[0];
-				control_secuencia.ptrUltimoLed = &secuencia2[4];
+				control_secuencia.ptrUltimoLed = &secuencia2[sizeof(secuencia2)/sizeof(secuencia2[0])];
          }
       }
 	   else {
