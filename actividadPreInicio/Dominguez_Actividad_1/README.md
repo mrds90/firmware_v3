@@ -48,8 +48,6 @@ make select_board
 Siempre debe estar en la ruta raiz de la carpeta clonada "firmware_v3" con la terminal de CIAA Launcher si desea usar los comandos.
 ## Autor
 
-Contributors names and contact info
-
 Dominguez Marcos
 [@mrds90](https://github.com/mrds90)
 
