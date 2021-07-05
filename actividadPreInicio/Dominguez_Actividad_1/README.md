@@ -5,7 +5,7 @@ Conmutar secuencialmente leds
 
 ## Descripción
 
-Utiliza la lectura de las teclas para tomar desiciones.
+Utiliza la lectura de las teclas para tomar decisiones.
 El comportamiento del firmware está definido por la siguiente tabla de verdad
 
 | Tecla  |           Resultado             |
