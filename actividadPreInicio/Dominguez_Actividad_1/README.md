@@ -21,13 +21,13 @@ El comportamiento del firmware está definido por la siguiente tabla de verdad
 
 ### Compilacion
 
-* abrir la terminal del CIAA launcher y ir a la ruta del firmware v3.
-* seleccionar el programa con el comando
+* Abrir la terminal del CIAA launcher e ir a la ruta del firmware v3.
+* Seleccionar el programa con el comando
 ```
 make select_program
 ```
-* elegir la carpeta actividadPreInicio/Dominguez_Actividad_1
-* compilar el programa el programa en la misma terminal con:
+* Elegir la carpeta actividadPreInicio/Dominguez_Actividad_1
+* Compilar el programa el programa en la misma terminal con:
 ```
 make all
 ```
