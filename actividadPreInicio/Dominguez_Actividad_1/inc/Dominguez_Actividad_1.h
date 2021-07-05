@@ -23,13 +23,11 @@ extern "C" {
 
 /*=====[Definition macros of public constants]===============================*/
 
-/*=====[Definition macros of public constants]===============================*/
-
 #define PERIODO_150MS              150 
 #define PERIODO_750MS              750 
-#define LED_QTY                    4 //Cantidad de leds
 
 /*=====[Public function-like macros]=========================================*/
+
 /**
  * @brief leo el estado de la tecla
  * 
@@ -37,6 +35,7 @@ extern "C" {
  * @return bool_t (true si tecla apretada)
  */
 #define leerTecla(tecla) !gpioRead(tecla)
+
 /**
  * @brief Enciende el led que le defino
  * 
@@ -44,6 +43,7 @@ extern "C" {
  * @return bool_t (true si logro encender)
  */
 #define encenderLed(led) gpioWrite(led, 1)
+
 /**
  * @brief apago el led que le defino
  * 
@@ -51,6 +51,7 @@ extern "C" {
  * @return bool_t (true si logro apagar)
  */
 #define apagarLed(led) gpioWrite(led, 0)
+
 /**
  * @brief Controla si el tiempo de demora elegido ya se cumplió
  * 
@@ -60,6 +61,7 @@ extern "C" {
 #define demoraCumplida(demora) delayRead(demora)
 
 /*=====[Definitions of public data types]====================================*/
+
 /**
  * @brief Indice de flags que habilitan las teclas
  * 
@@ -70,6 +72,7 @@ typedef enum {
 
    FLAGS_QTY
 } flag_tecla_t;
+
 /**
  * @brief Indice del vector que tiene los tiempos de demora.
  * 
@@ -80,6 +83,7 @@ typedef enum {
 
    DEMORAS_QTY
 } demoras_t;
+
 /**
  * @brief Estructura para controlar de forma escalable y genérica cualquier secuencia.
  * 
@@ -91,6 +95,7 @@ typedef struct {
 } control_secuencia_t;
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
+
 /**
  * @brief Enciende el led que se le pasa por argumento y apaga los otros, si entra un valor que no corresponde a ningun led apaga todos *
  * 
@@ -98,13 +103,13 @@ typedef struct {
  * @return bool_t (true si pudo escribir todos los pines)
  */
 bool_t encenderLedUnico(gpioMap_t led);
+
 /**
  * @brief controla el cambio de secuencia
  * 
  * @param ptr_secuencia 
  */
 void activarSecuencia(control_secuencia_t *ptr_secuencia);
-/*=====[Prototypes (declarations) of public interrupt functions]=============*/
 
 /*=====[C++ - end]===========================================================*/
 

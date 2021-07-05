@@ -8,16 +8,6 @@
 
 #include "Dominguez_Actividad_1.h"
 
-/*=====[Definition macros of private constants]==============================*/
-
-/*=====[Definitions of extern global variables]==============================*/
-
-/*=====[Definitions of public global variables]==============================*/
-
-/*=====[Definitions of private global variables]=============================*/
-
-/*=====[Main function, program entry point after power on or reset]==========*/
-
 /*=====[Main function, program entry point after power on or reset]==========*/
 /**
  * @brief El comportamiento esta basado en la siguiente tabla:
@@ -29,30 +19,33 @@
  * |  TEC3  |           Período 750           |
  * |  TEC4  |     Sentido a la izquierda      |
  * 
+ * Las teclas 1 y 4 no responden si la otra esta presionada.
+ * Las teclas 2 y 3 no responden si la otra esta presionada.
+ * 
  * @return int 
  */
 int main(void)
 {
-	/* Variables de manejo de Leds */
-	gpioMap_t secuencia1[] = {LEDB,LED1,LED2,LED3};
-	gpioMap_t secuencia2[] = {LED3,LED2,LED1,LEDB};
-	
-	control_secuencia_t control_secuencia = {.ptrLed = &secuencia1[0], .ptrPrimerLed = &secuencia1[0], .ptrUltimoLed = &secuencia1[sizeof(secuencia1)/sizeof(secuencia1[0])]};
-
-   /* Variables de Retardo no bloqueante */
+	/* Variables de Retardo no bloqueante */
 	delay_t delayLeds;
 	const uint16_t times[DEMORAS_QTY] = {PERIODO_150MS,PERIODO_750MS};
 
-	/* banderas (flags) de control */
-	bool_t flag_tecla[FLAGS_QTY] = {true};
-      
 	boardInit();
 
 	delayConfig(&delayLeds, times[D150MS]);
 
    // ----- Loop infinito -------------------------
    while(true) {
-	   /*-----------------Cambio de sentido de conmutación------------------*/
+		
+		/* Variables de manejo de Leds */
+		static gpioMap_t secuencia1[] = {LEDB,LED1,LED2,LED3};
+		static gpioMap_t secuencia2[] = {LED3,LED2,LED1,LEDB};
+		static control_secuencia_t control_secuencia = {.ptrLed = &secuencia1[0], .ptrPrimerLed = &secuencia1[0], .ptrUltimoLed = &secuencia1[sizeof(secuencia1)/sizeof(secuencia1[0])]};
+
+		/* banderas (flags) de control para las teclas */
+		static bool_t flag_tecla[FLAGS_QTY] = {true};
+	   
+		/*-----------------Cambio de sentido de conmutación------------------*/
 	   if (leerTecla(TEC1)) {
 		   if (flag_tecla[CAMBIAR_SENTIDO]) {
 			   flag_tecla[CAMBIAR_SENTIDO] = false;
