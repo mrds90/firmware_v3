@@ -96,25 +96,7 @@ typedef struct {
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
-/**
- * @brief Enciende el led que se le pasa por argumento y apaga los otros, si entra un valor que no corresponde a ningun led apaga todos *
- * 
- * @param led gpioMap_t
- * @return bool_t (true si pudo escribir todos los pines)
- */
-bool_t encenderLedUnico(gpioMap_t led);
-/**
- * @brief Apaga todos los leds
- * 
- * @return bool_t 
- */
-bool_t apagarLeds(void); // no se usa
-/**
- * @brief gestiona la eleccion del led que debe encenderse según la secuencia que se le pasa por referencia
- * 
- * @param ptr_secuencia 
- */
-void activarSecuencia(control_secuencia_t *ptr_secuencia);
+
 
 /*=====[C++ - end]===========================================================*/
 
