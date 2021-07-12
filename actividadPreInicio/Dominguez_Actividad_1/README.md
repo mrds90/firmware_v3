@@ -51,3 +51,7 @@ Siempre debe estar en la ruta raiz de la carpeta clonada "firmware_v3" con la te
 Dominguez Marcos
 [@mrds90](https://github.com/mrds90)
 
+## Version
+v1.1
+
+Esta versión se edito posterior a la entrega para mejorar su funcionalidad. Realizar un checkout a dos commit previos para ver la versión entregable.
